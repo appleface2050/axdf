@@ -21,7 +21,7 @@ POST api/talk
 	  <td>comment</td>
 	  <td>required</td>
    </tr>
-   <tr> <<td>text</td>  <td>发消息人账号</td>  <td>Y</td></tr>
+   <tr> <td>text</td>  <td>发消息人账号</td>  <td>Y</td></tr>
    <tr> <td>text</td>  <td>消息内容</td>  <td>Y</td></tr>
 </table>
 
@@ -33,7 +33,7 @@ GET api/send_sms_code
 	  <td>comment</td>
 	  <td>required</td>
    </tr>
-   <tr> <<td>tel</td>  <td>手机号</td>  <td>Y</td></tr>
+   <tr> <td>tel</td>  <td>手机号</td>  <td>Y</td></tr>
 </table>
 
 -------------------
