@@ -25,5 +25,15 @@ POST api/talk
    <tr> <td>text</td>  <td>消息内容</td>  <td>Y</td></tr>
 </table>
 
+<h3 id="1">发手机验证码</h3>
+GET api/send_sms_code
+<table>
+   <tr>
+	  <td>parameter</td>
+	  <td>comment</td>
+	  <td>required</td>
+   </tr>
+   <tr> <<td>tel</td>  <td>手机号</td>  <td>Y</td></tr>
+</table>
 
 -------------------
