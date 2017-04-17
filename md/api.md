@@ -4,6 +4,7 @@
 
 <h3 id="1">首页交流-获取数据</h3>
 GET api/talk
+<br>
 <table>
    <tr>
 	  <td>parameter</td>
@@ -15,6 +16,7 @@ GET api/talk
 
 <h3 id="1">首页交流-提交数据</h3>
 POST api/talk
+<br>
 <table>
    <tr>
 	  <td>parameter</td>
@@ -27,6 +29,7 @@ POST api/talk
 
 <h3 id="1">发手机验证码</h3>
 GET api/send_sms_code
+<br>
 <table>
    <tr>
 	  <td>parameter</td>
