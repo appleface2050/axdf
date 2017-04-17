@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 
 from __future__ import unicode_literals
 
@@ -10,6 +10,40 @@ from django.contrib.auth.models import User
 from util.basemodel import JSONBaseModel
 from django.utils import timezone
 
+
+class Userinfo(JSONBaseModel):
+    """
+    用户详情
+    """
+    tel = models.CharField(default="", max_length=64, unique=False, null=False)
+    name = models.CharField(default="", max_length=64, unique=False, null=True)
+    email = models.CharField(default="", max_length=128, unique=False, null=True)
+    type = models.CharField(default="user", max_length=128, unique=False, null=True)
+    zhucedi = models.CharField(default="", max_length=256, unique=False, null=True)
+    address = models.CharField(default="", max_length=256, unique=False, null=True)
+    qiyezizhi = models.CharField(default="", max_length=256, unique=False, null=True)
+    chenglanfanwei = models.CharField(default="", max_length=256, unique=False, null=True)
+    lianxiren = models.CharField(default="", max_length=64, unique=False, null=True)
+    uptime = models.DateTimeField(auto_now=True, verbose_name=u'数据更新时间')
+
+    @classmethod
+    def add_user_info(cls, tel, name, email, type, zhucedi, address, qiyezizhi, chenglanfanwei, lianxiren):
+        a = cls()
+        a.tel = tel
+        a.name = name
+        a.email = email
+        a.type = type
+        a.zhucedi = zhucedi
+        a.address = address
+        a.qiyezizhi = qiyezizhi
+        a.chenglanfanwei = chenglanfanwei
+        a.lianxiren = lianxiren
+        try:
+            a.save()
+            return True
+        except Exception, e:
+            print e
+            return False
 
 class SMSCodeSession(JSONBaseModel):
     tel = models.CharField(default="", max_length=64, unique=False, null=False)
@@ -44,7 +78,7 @@ class Talk(JSONBaseModel):
     """
     tel = models.CharField(default="", max_length=64, unique=False, null=False)
     text = models.CharField(default="", max_length=640, unique=False, null=False)
-    uptime = models.DateTimeField(auto_now =True, verbose_name=u'数据更新时间')
+    uptime = models.DateTimeField(auto_now=True, verbose_name=u'数据更新时间')
 
     @classmethod
     def get_last_N_talk(cls, N=10):
@@ -65,5 +99,3 @@ class Talk(JSONBaseModel):
         except Exception, e:
             print e
             return False
-
-
