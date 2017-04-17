@@ -8,8 +8,8 @@ GET api/talk
    <tr>
 	  <td>parameter</td>
 	  <td>comment</td>
+	  <td>required</td>
    </tr>
-   <tr> <td></td>   <td>获取10条记录</td>  </tr>
 </table>
 
 
@@ -19,9 +19,10 @@ POST api/talk
    <tr>
 	  <td>parameter</td>
 	  <td>comment</td>
+	  <td>required</td>
    </tr>
-   <tr> <<td>text</td>  <td>发消息人账号</td>  </tr>
-   <tr> <td>text</td>  <td>消息内容</td>  </tr>
+   <tr> <<td>text</td>  <td>发消息人账号</td>  <td>Y</td></tr>
+   <tr> <td>text</td>  <td>消息内容</td>  <td>Y</td></tr>
 </table>
 
 
