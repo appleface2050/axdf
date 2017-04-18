@@ -17,7 +17,7 @@ import json
 import time
 
 def index(request):
-    time.sleep(2)
+    # time.sleep(2)
     return HttpResponse("Hello, world. axdf")
 
 @csrf_exempt
