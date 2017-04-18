@@ -183,17 +183,3 @@ CORS_ALLOW_CREDENTIALS = False
 CORS_REPLACE_HTTPS_REFERER = False
 
 print DATABASES
-
-############################# 设置mongodb##############################################
-from pymongo import MongoClient
-mgclient = MongoClient()
-username = "root"
-password = "Bluestacks2017"
-
-CONN_ADDR1 = 'dds-2ze99c409d90d9d41.mongodb.rds.aliyuncs.com:3717'
-CONN_ADDR2 = 'dds-2ze99c409d90d9d42.mongodb.rds.aliyuncs.com:3717'
-REPLICAT_SET = 'mgset-3150543'
-mgclient = MongoClient([CONN_ADDR1, CONN_ADDR2], replicaSet=REPLICAT_SET)
-
-print mgclient
-mgclient.admin.authenticate(username, password)
